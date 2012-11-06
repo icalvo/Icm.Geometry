@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46467CD7-DE80-492A-8EEB-E7CD25DFA66A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Icm.Geometry</RootNamespace>
+    <AssemblyName>Icm.Geometry</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Icm.Geometry.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Icm.Geometry.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bound.vb" />
+    <Compile Include="Figure\BaseFigure.vb" />
+    <Compile Include="Figure\Composite\CompositeFigure.vb" />
+    <Compile Include="Figure\Composite\ContainerFigure.vb" />
+    <Compile Include="Figure\Composite\FixedSizeCrossFigure.vb" />
+    <Compile Include="Figure\Composite\ICompositeFigure.vb" />
+    <Compile Include="Figure\Drawing interfaces\IEllipseDrawable.vb" />
+    <Compile Include="Figure\Drawing interfaces\IImageDrawable.vb" />
+    <Compile Include="Figure\Drawing interfaces\ILineDrawable.vb" />
+    <Compile Include="Figure\Drawing interfaces\IPathDrawable.vb" />
+    <Compile Include="Figure\Drawing interfaces\IPolygonDrawable.vb" />
+    <Compile Include="Figure\Drawing interfaces\IStringDrawable.vb" />
+    <Compile Include="Figure\IFigure.vb" />
+    <Compile Include="Figure\IFixedSizeFigure.vb" />
+    <Compile Include="Figure\Simple\CircleFigure.vb" />
+    <Compile Include="Figure\Simple\FixedSizeCircleFigure.vb" />
+    <Compile Include="Figure\Simple\FixedSizeSegmentFigure.vb" />
+    <Compile Include="Figure\Simple\FixedSizeSimpleFigure.vb" />
+    <Compile Include="Figure\Simple\FixedSizeSquareFigure.vb" />
+    <Compile Include="Figure\Simple\ImageFigure.vb" />
+    <Compile Include="Figure\Simple\ISimpleFigure.vb" />
+    <Compile Include="Figure\Simple\PolygonFigure.vb" />
+    <Compile Include="Figure\Simple\PolylineFigure.vb" />
+    <Compile Include="Figure\Simple\RectangleFigure.vb" />
+    <Compile Include="Figure\Simple\SegmentFigure.vb" />
+    <Compile Include="Figure\Simple\SimpleFigure.vb" />
+    <Compile Include="Figure\Simple\StarFigure.vb" />
+    <Compile Include="Figure\Simple\StringFigure.vb" />
+    <Compile Include="GeometryUtils.vb" />
+    <Compile Include="GPoint.vb" />
+    <Compile Include="GSegment.vb" />
+    <Compile Include="IAffineTransformable.vb" />
+    <Compile Include="ICollectionExtensions.vb" />
+    <Compile Include="IntersectionData.vb" />
+    <Compile Include="IPositionObservable.vb" />
+    <Compile Include="IPositionObserver.vb" />
+    <Compile Include="MathUtils.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
